@@ -1,0 +1,91 @@
+/* ---------- Basic reset ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Page layout ---------- */
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #1f2937;
+  background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%);
+}
+
+/* ---------- Card ---------- */
+.card {
+  width: 100%;
+  max-width: 420px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(31, 41, 55, 0.12);
+}
+
+h1 {
+  font-size: clamp(2rem, 6vw, 2.75rem);
+  color: #4338ca;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+/* ---------- Button ---------- */
+button {
+  padding: 0.85rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: #4f46e5;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: #4338ca;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+button:focus-visible {
+  outline: 3px solid #a5b4fc;
+  outline-offset: 3px;
+}
+
+/* ---------- Greeting message ---------- */
+.message {
+  min-height: 1.5em;          /* keeps layout steady before the message appears */
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  color: #059669;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.message.visible {
+  opacity: 1;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 480px) {
+  .card {
+    padding: 2rem 1.25rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
